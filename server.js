@@ -5,7 +5,11 @@ const bodyParser = require("body-parser");
 const reminderRoutes = require("./router/reminderRoutes");
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: "https://contest-tracker-app.vercel.app/",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 app.use(bodyParser.json());
 
 app.use("/api/reminders", reminderRoutes);
