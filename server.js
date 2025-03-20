@@ -6,7 +6,7 @@ const reminderRoutes = require("./router/reminderRoutes");
 
 const app = express();
 app.use(cors({
-  origin: "https://contest-tracker-app.vercel.app/",
+  origin: "https://contest-tracker-app.vercel.app",
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
